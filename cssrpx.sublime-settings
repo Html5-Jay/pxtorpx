@@ -1,0 +1,5 @@
+{
+    "px_to_rpx": 2,
+    "max_rpx_fraction_length": 6,
+    "available_file_types": [".wxss"]
+}
