@@ -23,7 +23,7 @@ def get_settings():
 def get_setting(view, key):
     return view.settings().get(key, SETTINGS[key]);
 
-class CssRemCommand(sublime_plugin.EventListener):
+class CssRpxCommand(sublime_plugin.EventListener):
     def on_text_command(self, view, name, args):
         if name == 'commit_completion':
             view.run_command('replace_rpx')
@@ -67,7 +67,7 @@ class CssRemCommand(sublime_plugin.EventListener):
 
         return snippets
 
-class ReplaceRemCommand(sublime_plugin.TextCommand):
+class ReplaceRpxCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         needFix = lastCompletion["needFix"]
         if needFix == True:
