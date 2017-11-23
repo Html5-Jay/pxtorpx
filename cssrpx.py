@@ -58,7 +58,7 @@ class CssRpxCommand(sublime_plugin.EventListener):
             else:
                 start = location
 
-            rpxValue = round(float(value) / get_setting(view, 'px_to_rpx'), get_setting(view, 'max_rpx_fraction_length'))
+            rpxValue = round(float(value) * get_setting(view, 'px_to_rpx'), get_setting(view, 'max_rpx_fraction_length'))
 
             lastCompletion["value"] = str(rpxValue) + 'rpx'
             lastCompletion["region"] = sublime.Region(start, location)
